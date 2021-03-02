@@ -1,0 +1,32 @@
+class Assignment1{
+
+  public int medianArrayValue (int[] o){
+     int sum =0;
+    int median=0;
+   for (int i=0; i<o.length;i++){
+      //System.out.println(o[i]);
+     System.out.println(sum);
+      for (int j=0;j<o.length; j++){
+         sum = 0;
+            if (o[i]> o[j]){
+              sum = sum +1;// htis is the problem how you get 
+            }
+            if( sum ==((o.length-1)/2)){
+               median = o[i];
+            }
+      }
+      System.out.println(sum);
+     
+
+   }
+   return median;
+  }
+    
+  public static void main(String[] args){
+    Assignment1 a = new Assignment1();
+    int [] b = new int[]{13,2,7,3,4};
+    int answer = a.medianArrayValue(b);
+    System.out.println(answer);
+  }
+    
+}
